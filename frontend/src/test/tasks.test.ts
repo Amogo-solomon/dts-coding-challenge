@@ -135,7 +135,7 @@ describe("taskApi", () => {
     );
     await realApi.getAll();
 
-    expect(fetchSpy).toHaveBeenCalledWith("/api/v1/tasks");
+    expect(fetchSpy).toHaveBeenCalledWith("/api/v1/tasks/");
   });
 
   it("create sends POST with JSON body", async () => {
