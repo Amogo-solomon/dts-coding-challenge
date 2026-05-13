@@ -50,7 +50,10 @@ jobs:
           cd frontend
           npm install --force
 
+      - name: Fix binary permissions
+        run: chmod -R +x frontend/node_modules/.bin/
+
       - name: Run tests
         run: |
           cd frontend
-          ./node_modules/.bin/vitest run
+          node node_modules/vitest/dist/cli.js run
